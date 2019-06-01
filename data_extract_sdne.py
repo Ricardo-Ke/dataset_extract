@@ -52,7 +52,7 @@ def extract_sdne(filepath):
                 edges.add(first_order)
 
     df = pd.DataFrame(np.array(lines))
-    dest_filepath = 'sdne_' + filepath
+    dest_filepath = 'sdne/sdne_' + filepath
     df.to_csv(dest_filepath, header=False, index=False, sep='\t')
     print('file : {}, vertices : {}, edges : {}'.format(dest_filepath, len(vertices), len(edges)))
 
